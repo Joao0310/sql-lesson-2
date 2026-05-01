@@ -1,0 +1,19 @@
+# Ambiente virtual
+venv/
+env/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos sensíveis
+.env
+
+# Banco de dados
+*.db
+
+# Arquivos do sistema
+.DS_Store
+
+# Alembic (opcional, depende do caso)
+alembic/versions/*.pyc
