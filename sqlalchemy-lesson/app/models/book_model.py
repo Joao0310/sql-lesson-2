@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Table, ForeignKey
 from sqlalchemy.orm import relationship
-from app.database.database import Base
+from database.database import Base
 
 # Tabela de associação para o relacionamento many-to-many
 # author_book_association = Table(

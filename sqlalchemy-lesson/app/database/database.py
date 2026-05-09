@@ -11,9 +11,15 @@ engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
 def init_db():
-    from app.models.author_model import AuthorModel
-    from app.models.book_model import BookModel
-    from app.models.loan_model import LoanModel
+    from models.author_model import AuthorModel
+    from models.book_model import BookModel
 
     Base.metadata.create_all(bind=engine)

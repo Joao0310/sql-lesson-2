@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.models.author_model import AuthorModel
-from app.repositories.base_repository import BaseRepository
+from models.author_model import AuthorModel
+from repositories.base_repository import BaseRepository
 
 class AuthorRepository(BaseRepository[AuthorModel]):
     def __init__(self, session: Session):
